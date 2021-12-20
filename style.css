@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edeef0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 45px;
+  width: 100%;
+  background-color: #507299;
+  z-index: 2;
+}
+
+.logo {
+  margin: auto;
+  margin-left: 15%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: inherit;
+}
+
+.main {
+  margin: 0 auto;
+  margin-top: 15px;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.side_bar {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.side_bar ul {
+  list-style-type: none;
+}
+
+li {
+  color: #2e5473;
+}
+
+li > a {
+  padding: 10px;
+  display: block;
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #e1e5eb;
+  border-radius: 5px;
+}
+
+.content {
+  width: 460px;
+}
+
+.post {
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 0px #808080;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+}
+
+.post__header {
+  font-weight: 700;
+  border-bottom: 4px solid #d0d0d0;
+}
+
+.post__header span {
+  display: block;
+  font-weight: 700;
+  margin: 20px;
+  margin-bottom: 10px;
+}
+
+.post__container {
+  margin: 20px;
+}
+
+.with_header > .post__container {
+  margin-top: 10px;
+}
+
+.post__content {
+  text-align: justify;
+  border-bottom: 4px solid #d0d0d0;
+  padding-bottom: 10px;
+}
+
+.post__content::selection {
+  background-color: #edeef0;
+  color: green;
+}
+
+
+.post__content img {
+  width: 100%;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  color: #2e5473;
+  margin-top: 10px;
+}
+.wrapper {
+  position: relative;
+}
+
+.right_side_bar {
+  position: sticky;
+  top: 60px;
+  width: 160px;
+}
+
+.popup {
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 0px #808080;
+  padding: 25px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.popup > * {
+  background-color: #edeef0;
+}
+
+.popup__header {
+  margin-bottom: 15px;
+}
+
+.special {
+  background-color: #fff;
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  background-color: #fff;
+  line-height: 32px;
+  color:#808080;
+}
+
+@media screen and (max-width: 900px) {
+  .right_side_bar {
+    display: none;
+   }
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side_bar {
+    width: 460px;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .post:last-child {
+    margin-bottom: 40px;
+  }
+}
